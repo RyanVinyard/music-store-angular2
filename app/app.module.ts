@@ -4,6 +4,8 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent }   from './app.component';
 import { AlbumListComponent } from './album-list.component';
 import { GenrePipe } from './genre.pipe';
+import { ArtistPipe } from './artist.pipe';
+
 
 
 @NgModule({
@@ -15,6 +17,7 @@ import { GenrePipe } from './genre.pipe';
     AlbumListComponent,
     AppComponent,
     GenrePipe,
+    ArtistPipe,
   ],
   bootstrap:    [ AppComponent ]
 })
