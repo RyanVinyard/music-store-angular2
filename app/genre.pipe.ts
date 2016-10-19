@@ -9,31 +9,31 @@ import {Album} from './album.model';
 export class GenrePipe implements PipeTransform {
   transform(input: Album[], desiredGenre) {
     var output: Album[] = [];
-    if(desiredGenre === "Genre1") {
+    if(desiredGenre === "Rock") {
       console.log(desiredGenre);
       for (var i = 0; i < input.length; i++) {
-        if (input[i].genre === "Genre1") {
+        if (input[i].genre === "Rock") {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredGenre === "Genre2") {
+    } else if (desiredGenre === "Indie") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].genre === "Genre2") {
+        if (input[i].genre === "Indie") {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredGenre === "Genre3") {
+    } else if (desiredGenre === "Rap") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].genre === "Genre3") {
+        if (input[i].genre === "Rap") {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredGenre === "Genre4") {
+    } else if (desiredGenre === "Salsa") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].genre === "Genre4") {
+        if (input[i].genre === "Salsa") {
           output.push(input[i]);
         }
       }

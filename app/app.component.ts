@@ -16,11 +16,16 @@ import { Album } from './album.model';
 
 export class AppComponent {
   public masterAlbumList: Album[] = [
-    new Album("Album1", "Artist1", "Genre1", 8),
-    new Album("Album2", "Artist2", "Genre2", 7),
-    new Album("Album3", "Artist3", "Genre3", 9),
-    new Album("Album4", "Artist4", "Genre4", 4),
-  ];
+    new Album("Stunt", "Barenaked Ladies", "Rock", 8),
+    new Album("Oh, Inverted World", "The Shins", "Indie", 7),
+    new Album("Torches", "Foster the People", "Indie", 9),
+    new Album("Buena Vista Social Club", "Buena Vista Social Club", "Son", 4),
+    new Album("Illmatic", "Nas", "Rap", 6),
+    new Album("Ready To Die", "Biggie", "Rap", 10),
+    new Album("Lo Mato", "Willie Colon", "Salsa", 12),
+    new Album("Born to Run", "Bruce Springsteen", "Classic Rock", 15),
+    new Album("Thriller", "Michael Jackson", "Pop", 100)
+    ];
   selectedAlbum: Album = null;
   showDetails(clickedAlbum: Album) {
     this.selectedAlbum = clickedAlbum;
