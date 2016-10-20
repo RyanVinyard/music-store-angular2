@@ -13,8 +13,16 @@ import { Album } from './album.model';
 
 export class AlbumCheckboxComponent {
   @Input() album: Album;
+  @Output() addTotalSender = new EventEmitter();
+  @Output() subtractTotalSender = new EventEmitter();
   toggleAdded(setAdded: boolean) {
     this.album.addedToCart = setAdded;
     console.log(this.album.addedToCart);
+  }
+  addToTotal(album: Album) {
+    this.addTotalSender.emit(album);
+  }
+  subtractFromTotal(album: Album) {
+    this.subtractTotalSender.emit(album);
   }
 }

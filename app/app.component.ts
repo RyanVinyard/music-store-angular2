@@ -7,8 +7,11 @@ import { Album } from './album.model';
   template: `
   <div class="container">
     <h1>Welcome to our Music Store</h1>
+    <p> {{ cartTotal }}</p>
     <album-list
       [childAlbumList]="masterAlbumList"
+      (addClickSender)="addCartTotal($event)"
+      (subtractClickSender)="subtractCartTotal($event)"
     ></album-list>
   </div>
     `
@@ -26,10 +29,20 @@ export class AppComponent {
     new Album("Born to Run", "Bruce Springsteen", "Classic Rock", 15),
     new Album("Thriller", "Michael Jackson", "Pop", 100)
     ];
-  selectedAlbum: Album = null;
-  showDetails(clickedAlbum: Album) {
-    this.selectedAlbum = clickedAlbum;
-  }
-}
+    public cartTotal = 0;
+    addCartTotal(album) {
+      if(album.addedToCart == true) {
+      this.cartTotal += album.price
+      }
+    }
+    reduceCartTotal(album) {
+      this.cartTotal -= album.price
+    }
 
-export class Task { }
+  // selectedAlbum: Album = null;
+  // showDetails(clickedAlbum: Album) {
+  //   this.selectedAlbum = clickedAlbum;
+  // }
+
+
+}

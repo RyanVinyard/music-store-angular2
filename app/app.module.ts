@@ -6,11 +6,6 @@ import { AlbumListComponent } from './album-list.component';
 import { GenrePipe } from './genre.pipe';
 import { ArtistPipe } from './artist.pipe';
 import { AlbumCheckboxComponent } from './album-checkbox.component';
-import { PricePipe } from './price.pipe';
-
-
-
-
 
 @NgModule({
   imports: [
@@ -23,7 +18,6 @@ import { PricePipe } from './price.pipe';
     GenrePipe,
     ArtistPipe,
     AlbumCheckboxComponent,
-    PricePipe,
   ],
   bootstrap:    [ AppComponent ]
 })
