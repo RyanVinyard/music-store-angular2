@@ -5,6 +5,10 @@ import { AppComponent }   from './app.component';
 import { AlbumListComponent } from './album-list.component';
 import { GenrePipe } from './genre.pipe';
 import { ArtistPipe } from './artist.pipe';
+import { AlbumCheckboxComponent } from './album-checkbox.component';
+import { PricePipe } from './price.pipe';
+
+
 
 
 
@@ -18,6 +22,8 @@ import { ArtistPipe } from './artist.pipe';
     AppComponent,
     GenrePipe,
     ArtistPipe,
+    AlbumCheckboxComponent,
+    PricePipe,
   ],
   bootstrap:    [ AppComponent ]
 })

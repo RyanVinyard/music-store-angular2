@@ -38,9 +38,30 @@ export class GenrePipe implements PipeTransform {
         }
       }
       return output;
-    } else {
-      return input;
+    } else if (desiredGenre === "ClassicRock") {
+    for (var i = 0; i < input.length; i++) {
+      if (input[i].genre === "ClassicRock") {
+        output.push(input[i]);
       }
     }
+    return output;
+  } else if (desiredGenre === "Son") {
+      for (var i = 0; i < input.length; i++) {
+      if (input[i].genre === "Son") {
+       output.push(input[i]);
+     }
+   }
+   return output; 
+ } else if (desiredGenre === "Pop") {
+    for (var i = 0; i < input.length; i++) {
+      if (input[i].genre === "Pop") {
+        output.push(input[i]);
+      }
+    }
+    return output;
+  } else {
+    return input;
+    }
+  }
 
   }

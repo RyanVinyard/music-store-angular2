@@ -30,4 +30,6 @@ export class AppComponent {
   showDetails(clickedAlbum: Album) {
     this.selectedAlbum = clickedAlbum;
   }
-  }
+}
+
+export class Task { }

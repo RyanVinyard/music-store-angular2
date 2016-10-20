@@ -27,11 +27,14 @@ import { Album } from './album.model';
         <option value="Bruce Springsteen">Bruce Springsteen</option>
         <option value="Michael Jackson">Michael Jackson</option>
       </select>
-      <div *ngFor="let currentAlbum of childAlbumList | genre:genreSelected | artist:artistSelected">
+      <div *ngFor="let currentAlbum of childAlbumList | genre:genreSelected | artist:artistSelected | price:albumChecked">
         <h3>{{ currentAlbum.name }}</h3>
         <h4>{{ currentAlbum.artist }}</h4>
         <p>{{ currentAlbum.genre }}</p>
         <p>{{ currentAlbum.price }}</p>
+        <album-checkbox
+            [album]="currentAlbum"
+          ></album-checkbox>
         <hr>
       </div>
   `
@@ -42,13 +45,7 @@ export class AlbumListComponent {
   @Output() clickSender = new EventEmitter();
   public genreSelected: string = "All";
   public artistSelected: string = "All";
-
-  // selectGenre(genreSelected: Album) {
-  //   this.clickSender.emit(genreSelected);
-  // }
-  // selectArtist(artistSelected: Album) {
-  //   this.clickSender.emit(artistSelected);
-  // }
+  public albumChecked: boolean = false;
 
   genreChange(optionFromMenu) {
     this.genreSelected = optionFromMenu;
