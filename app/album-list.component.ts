@@ -17,16 +17,21 @@ import { Album } from './album.model';
       </select>
       <select (change)="artistChange($event.target.value)">
         <option value="All">Show all artists</option>
-        <option value="Artist1">Artist 1</option>
-        <option value="Artist2">Artist 2</option>
-        <option value="Artist3">Artist 3</option>
-        <option value="Artist4">Artist 4</option>
+        <option value="Barenaked Ladies">Barenaked Ladies</option>
+        <option value="The Shins">The Shins</option>
+        <option value="Foster the People">Foster the People</option>
+        <option value="Buena Vista Social Club">Buena Vista Social Club</option>
+        <option value="Nas">Nas</option>
+        <option value="Biggie">Biggie</option>
+        <option value="Willie Colon">Willie Colon</option>
+        <option value="Bruce Springsteen">Bruce Springsteen</option>
+        <option value="Michael Jackson">Michael Jackson</option>
       </select>
       <div *ngFor="let currentAlbum of childAlbumList | genre:genreSelected | artist:artistSelected">
         <h3>{{ currentAlbum.name }}</h3>
         <h4>{{ currentAlbum.artist }}</h4>
         <p>{{ currentAlbum.genre }}</p>
-        <p>${{ currentAlbum.price }}.00</p>
+        <p>{{ currentAlbum.price }}</p>
         <hr>
       </div>
   `

@@ -9,38 +9,72 @@ import {Album} from './album.model';
 export class ArtistPipe implements PipeTransform {
   transform(input: Album[], desiredArtist) {
     var output: Album[] = [];
-    if(desiredArtist === "Artist1") {
+    if(desiredArtist === "Barenaked Ladies") {
       console.log(desiredArtist);
       for (var i = 0; i < input.length; i++) {
-        if (input[i].artist === "Artist1") {
+        if (input[i].artist === "Barenaked Ladies") {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredArtist === "Artist2") {
+    } else if (desiredArtist === "The Shins") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].artist === "Artist2") {
+        if (input[i].artist === "The Shins") {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredArtist === "Artist3") {
+    } else if (desiredArtist === "Foster the People") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].artist === "Artist3") {
+        if (input[i].artist === "Foster the People") {
           output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredArtist === "Artist4") {
+    } else if (desiredArtist === "Buena Vista Social Club") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].artist === "Artist4") {
+        if (input[i].artist === "Buena Vista Social Club") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (desiredArtist === "Nas") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].artist === "Nas") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (desiredArtist === "Biggie") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].artist === "Biggie") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (desiredArtist === "Willie Colon") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].artist === "Willie Colon") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (desiredArtist === "Bruce Springsteen") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].artist === "Bruce Springsteen") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (desiredArtist === "Michael Jackson") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].artist === "Michael Jackson") {
           output.push(input[i]);
         }
       }
       return output;
     } else {
       return input;
-      }
     }
-
   }
+}
